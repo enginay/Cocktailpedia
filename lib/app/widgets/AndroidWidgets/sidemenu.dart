@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:cocktail/app/screen/android_screen/all_cocktail_screen.dart';
 
 class SideMenu extends StatelessWidget {
   @override
@@ -32,6 +33,7 @@ class SideMenu extends StatelessWidget {
                 ),
               ),
               leading: Icon(Icons.local_bar, size: 40, color: Colors.white),
+              onTap: () => Navigator.pushNamed(context, AllCocktailScreen.route) ,
             ),
             Divider(
               height: 25,

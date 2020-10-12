@@ -2,8 +2,9 @@
 import 'dart:io';
 import 'package:flutter/material.dart'; 
 import 'package:flutter/cupertino.dart';
-import './widgets/AndroidWidgets/mainView.dart';
-import './widgets/IosWidgets/mainView.dart';
+import 'app/widgets/AndroidWidgets/main_view.dart';
+import 'app/widgets/IosWidgets/main_view.dart';
+import './app/screen/android_screen/all_cocktail_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,7 +14,6 @@ class MyApp extends StatelessWidget {
   bool osCheck = Platform.isIOS;
   @override
   Widget build(BuildContext context) {
-    print(osCheck);
     return osCheck? CupertinoApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
@@ -30,6 +30,10 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MyHomePage(title: 'Cocktail Application'),
+      routes:  {
+        AllCocktailScreen.route: (context) => AllCocktailScreen(),
+        
+      },
     );
   }
 }
