@@ -19,7 +19,7 @@ class _AllCocktailScreenState extends State<AllCocktailScreen> {
     //final response = await getAllCocktails();
     await getAllCocktails().then((value) {
       setState(() {
-        Iterable data = json.decode(value.body);
+        Iterable data = json.decode(value.body)['drinks'];
         cocktails = data.map((e) => Cocktail.fromJson(e)).toList();
       });
     });

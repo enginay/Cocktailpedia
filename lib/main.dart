@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   bool osCheck = Platform.isIOS;
   @override
   Widget build(BuildContext context) {
-    return osCheck? CupertinoApp(
+    return !osCheck? CupertinoApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: CupertinoThemeData(
