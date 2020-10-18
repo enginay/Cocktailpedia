@@ -23,6 +23,12 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       drawer: SideMenu(),
       body: Center(
+        /*child: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(begin: Alignment.topCenter, 
+          end: Alignment.bottomCenter, 
+          colors: [Colors.blue, Colors.purple])),*/
+
         child: Text(
           'Welcome to Cocktailpedia',
           style: GoogleFonts.lato(
