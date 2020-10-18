@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../services/cocktail_services.dart';
 import '../../../model/cocktail.dart';
 import 'dart:convert';
-import 'dart:io';
+import '../../widgets/AndroidWidgets/cocktailItem.dart';
 
 class AllCocktailScreen extends StatefulWidget {
   static const String route = '/allCocktails';
@@ -41,13 +41,7 @@ class _AllCocktailScreenState extends State<AllCocktailScreen> {
       body: ListView.builder(
         itemCount: cocktails.length,
         itemBuilder: (BuildContext context, int index) {
-          return Container(
-              child: Column(
-            children: [
-              Text('${cocktails[index].cocktailId}'),
-              Text(cocktails[index].name)
-            ],
-          ));
+          return CocktailItem(cocktailName: cocktails[index].name, imageUrl:cocktails[index].imageUrl);
         },
       ),
     );

@@ -22,20 +22,20 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       drawer: SideMenu(),
-      body: Center(
-        /*child: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(begin: Alignment.topCenter, 
-          end: Alignment.bottomCenter, 
-          colors: [Colors.blue, Colors.purple])),*/
-
-        child: Text(
-          'Welcome to Cocktailpedia',
-          style: GoogleFonts.lato(
-            color: Colors.white, 
-            fontSize: 30,
-            fontWeight: FontWeight.w700,
-            fontStyle: FontStyle.italic,
+      body: Container(
+         decoration: BoxDecoration(
+            gradient: LinearGradient(begin: Alignment.topCenter, 
+            end: Alignment.bottomCenter, 
+            colors: [Colors.blue,Colors.purple,])),
+        child: Center(
+          child: Text(
+            'Welcome to Cocktailpedia',
+            style: GoogleFonts.lato(
+              color: Colors.white, 
+              fontSize: 30,
+              fontWeight: FontWeight.w700,
+              fontStyle: FontStyle.italic,
+            ),
           ),
         ),
       ),
