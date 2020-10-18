@@ -41,7 +41,10 @@ class _AllCocktailScreenState extends State<AllCocktailScreen> {
       body: ListView.builder(
         itemCount: cocktails.length,
         itemBuilder: (BuildContext context, int index) {
-          return CocktailItem(cocktailName: cocktails[index].name, imageUrl:cocktails[index].imageUrl);
+          return CocktailItem(
+              cocktailName: cocktails[index].name,
+              imageUrl: cocktails[index].imageUrl,
+              description: cocktails[index].description);
         },
       ),
     );

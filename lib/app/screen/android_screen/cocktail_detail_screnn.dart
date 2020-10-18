@@ -12,7 +12,7 @@ class CocktailDetailView extends StatelessWidget {
             title: Text("Detail page ${args["cocktailName"]}"),
           ),
           body: Container(
-          child: Center(child: Text("Hallo"),),      
+          child: Center(child: Text(args["description"] != null? args["description"] : "No Description Available"),),      
       ),
     );
   }

@@ -4,11 +4,12 @@ import '../../screen/android_screen/cocktail_detail_screnn.dart';
 class CocktailItem extends StatelessWidget {
   final String cocktailName;
   final String imageUrl;
-  CocktailItem({@required this.cocktailName, @required this.imageUrl});
+  final String description;
+  CocktailItem({@required this.cocktailName, @required this.imageUrl, @required this.description});
 
   void navigateToDetailPage(BuildContext context) {
     Navigator.pushNamed(context, CocktailDetailView.route,
-        arguments: {"cocktailName": this.cocktailName});
+        arguments: {"cocktailName": this.cocktailName, "description": this.description});
   }
 
   @override
