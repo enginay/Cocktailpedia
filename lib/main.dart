@@ -6,6 +6,8 @@ import 'app/widgets/AndroidWidgets/main_view.dart';
 import 'app/widgets/IosWidgets/main_view.dart';
 import './app/screen/android_screen/all_cocktail_screen.dart';
 import './app/screen/android_screen/cocktail_detail_screnn.dart';
+import './app/screen/android_screen/cocktail_search_screnn.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -35,7 +37,8 @@ class MyApp extends StatelessWidget {
       routes:  {
         AllCocktailScreen.route: (context) => AllCocktailScreen(),
         CocktailDetailView.route:(context) => CocktailDetailView(),
-        
+        CocktailSearchView.route:(context) => CocktailSearchView(),
+
       },
     );
   }

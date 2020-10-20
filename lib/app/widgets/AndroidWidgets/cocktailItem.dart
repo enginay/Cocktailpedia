@@ -1,4 +1,6 @@
+import 'package:cocktail/app/screen/android_screen/cocktail_search_screnn.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import '../../screen/android_screen/cocktail_detail_screnn.dart';
 
 class CocktailItem extends StatelessWidget {
@@ -12,10 +14,14 @@ class CocktailItem extends StatelessWidget {
         arguments: {"cocktailName": this.cocktailName, "description": this.description});
   }
 
+  void navigateToSearchPage(BuildContext context){
+    Navigator.pushNamed(context, CocktailSearchView.route);
+  }
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => this.navigateToDetailPage(context),
+      onTap: () => this.navigateToDetailPage(context) ,
       child: Container(
         margin: EdgeInsets.all(5),
         child: Stack(
@@ -28,6 +34,15 @@ class CocktailItem extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+
+  @override
+  Widget builder(BuildContext context) {
+    return  InkWell(
+      onTap: () => this.navigateToSearchPage(context),
+      child: Container(margin: EdgeInsets.all(5),
+      )
     );
   }
 }
