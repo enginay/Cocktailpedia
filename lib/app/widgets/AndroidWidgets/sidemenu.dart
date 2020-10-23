@@ -72,23 +72,6 @@ class SideMenu extends StatelessWidget {
               ),
               leading: Icon(Icons.star_rate, size: 40, color: Colors.white),
             ),
-            Divider(
-                height: 25,
-                color: Colors.white,
-                thickness: 1,
-            ),
-            ListTile(
-                title: Text(
-                'Settings',
-                style: GoogleFonts.lato(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.w700,
-                  fontStyle: FontStyle.italic,
-                ),
-              ),
-              leading: Icon(Icons.settings, size: 40, color: Colors.white),
-            ),
           ],
         ),
       ),

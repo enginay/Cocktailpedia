@@ -38,14 +38,20 @@ class _AllCocktailScreenState extends State<AllCocktailScreen> {
       appBar: AppBar(
         title: Text('All Cocktails'),
       ),
-      body: ListView.builder(
-        itemCount: cocktails.length,
-        itemBuilder: (BuildContext context, int index) {
-          return CocktailItem(
-              cocktailName: cocktails[index].name,
-              imageUrl: cocktails[index].imageUrl,
-              description: cocktails[index].description);
-        },
+      body: Container(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(begin: Alignment.topCenter, 
+            end: Alignment.bottomCenter, 
+            colors: [Colors.blue,Colors.purple,])),
+        child: ListView.builder(
+          itemCount: cocktails.length,
+          itemBuilder: (BuildContext context, int index) {
+            return CocktailItem(
+                cocktailName: cocktails[index].name,
+                imageUrl: cocktails[index].imageUrl,
+                description: cocktails[index].description);
+          },
+        ),
       ),
     );
   }

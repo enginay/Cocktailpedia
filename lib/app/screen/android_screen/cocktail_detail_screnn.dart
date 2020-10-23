@@ -12,6 +12,10 @@ class CocktailDetailView extends StatelessWidget {
             title: Text("Detail page ${args["cocktailName"]}"),
           ),
           body: Container(
+            decoration: BoxDecoration(
+            gradient: LinearGradient(begin: Alignment.topCenter, 
+            end: Alignment.bottomCenter, 
+            colors: [Colors.blue,Colors.purple,])),
           child: Center(child: Text(args["description"] != null? args["description"] : "No Description Available"),),      
       ),
     );

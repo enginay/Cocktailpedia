@@ -14,7 +14,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  bool osCheck = Platform.isIOS;
+  bool osCheck = !Platform.isIOS;
   @override
   Widget build(BuildContext context) {
     return osCheck? CupertinoApp(
