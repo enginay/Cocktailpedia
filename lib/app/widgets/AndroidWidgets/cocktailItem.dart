@@ -14,10 +14,6 @@ class CocktailItem extends StatelessWidget {
         arguments: {"cocktailName": this.cocktailName, "description": this.description});
   }
 
-  void navigateToSearchPage(BuildContext context){
-    Navigator.pushNamed(context, CocktailSearchView.route);
-  }
-
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -37,12 +33,4 @@ class CocktailItem extends StatelessWidget {
     );
   }
 
-  @override
-  Widget builder(BuildContext context) {
-    return  InkWell(
-      onTap: () => this.navigateToSearchPage(context),
-      child: Container(margin: EdgeInsets.all(5),
-      )
-    );
-  }
 }

@@ -38,6 +38,7 @@ class MyApp extends StatelessWidget {
         AllCocktailScreen.route: (context) => AllCocktailScreen(),
         CocktailDetailView.route:(context) => CocktailDetailView(),
         CocktailSearchView.route:(context) => CocktailSearchView(),
+        
 
       },
     );

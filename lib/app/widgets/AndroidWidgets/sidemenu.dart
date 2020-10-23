@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cocktail/app/screen/android_screen/all_cocktail_screen.dart';
+import 'package:cocktail/app/screen/android_screen/cocktail_search_screnn.dart';
+
 
 class SideMenu extends StatelessWidget {
   @override
@@ -51,6 +53,7 @@ class SideMenu extends StatelessWidget {
                 ),
               ),
               leading: Icon(Icons.search, size: 40,color: Colors.white),
+               onTap: () => Navigator.pushNamed(context, CocktailSearchView.route)
             ),
             Divider(
               height: 25,
