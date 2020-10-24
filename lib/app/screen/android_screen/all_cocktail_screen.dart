@@ -33,7 +33,6 @@ class _AllCocktailScreenState extends State<AllCocktailScreen> {
 
   @override
   Widget build(BuildContext context) {
-    print(cocktails.length);
     return Scaffold(
       appBar: AppBar(
         title: Text('All Cocktails'),
@@ -49,7 +48,8 @@ class _AllCocktailScreenState extends State<AllCocktailScreen> {
             return CocktailItem(
                 cocktailName: cocktails[index].name,
                 imageUrl: cocktails[index].imageUrl,
-                description: cocktails[index].description);
+                description: cocktails[index].description,
+                zutatenByMenge: cocktails[index].zutatenByMenge);
           },
         ),
       ),
