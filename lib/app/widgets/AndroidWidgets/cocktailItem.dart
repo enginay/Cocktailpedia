@@ -7,25 +7,17 @@ class CocktailItem extends StatelessWidget {
   final String cocktailName;
   final String imageUrl;
   final String description;
-  final Map<String, String> zutatenByMenge;
-  CocktailItem(
-      {@required this.cocktailName,
-      @required this.imageUrl,
-      @required this.description,
-      @required this.zutatenByMenge});
+  CocktailItem({@required this.cocktailName, @required this.imageUrl, @required this.description});
+
   void navigateToDetailPage(BuildContext context) {
-    Navigator.pushNamed(context, CocktailDetailView.route, arguments: {
-      "cocktailName": this.cocktailName,
-      "description": this.description,
-      "img": this.imageUrl,
-      "zubereitung": this.zutatenByMenge
-    });
+    Navigator.pushNamed(context, CocktailDetailView.route,
+        arguments: {"cocktailName": this.cocktailName, "description": this.description});
   }
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => this.navigateToDetailPage(context),
+      onTap: () => this.navigateToDetailPage(context) ,
       child: Container(
         margin: EdgeInsets.all(5),
         child: Stack(
@@ -40,4 +32,5 @@ class CocktailItem extends StatelessWidget {
       ),
     );
   }
+
 }

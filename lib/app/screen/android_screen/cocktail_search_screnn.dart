@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'package:cocktail/app/widgets/AndroidWidgets/cocktailItem.dart';
 import 'package:cocktail/services/cocktail_services.dart';
 import 'package:flutter/material.dart';
-import '../../../model/cocktail.dart';
 import 'package:flutter/rendering.dart';
 
 class CocktailSearchView extends StatefulWidget {
@@ -33,18 +32,20 @@ class _CocktailSearchViewState extends State<CocktailSearchView> {
   void getCocktailFromUserInput(String userInput) async {
     final res = await searchCocktail(userInput);
     final dynamic data = json.decode(res.body)['drinks'][0];
-    Cocktail cocktail = Cocktail.fromJson(data);
+    print(data);
     if (res.statusCode == 404) {
       con = Container(child: Text("Nothing searched"));
       return;
     }
+    String description = data['strInstructionsDE'] == null
+        ? "description not available"
+        : data['strInstructionsDE'];
     setState(() {
       con = Container(
         child: CocktailItem(
-            cocktailName: cocktail.name,
-            imageUrl: cocktail.imageUrl,
-            description: cocktail.description,
-            zutatenByMenge: cocktail.zutatenByMenge,),
+            cocktailName: data['strDrink'],
+            imageUrl: data['strDrinkThumb'],
+            description: description),
       );
     });
   }
@@ -73,7 +74,7 @@ class _CocktailSearchViewState extends State<CocktailSearchView> {
                         focusNode: this.focuNode,
                         controller: _searchEdit,
                         decoration: InputDecoration(
-                          border: OutlineInputBorder(
+                          border: new OutlineInputBorder(
                               borderRadius: BorderRadius.all(Radius.circular(90.0)),
                               borderSide: BorderSide(
                                 color: Colors.transparent,
