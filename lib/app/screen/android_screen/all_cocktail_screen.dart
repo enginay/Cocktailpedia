@@ -33,23 +33,27 @@ class _AllCocktailScreenState extends State<AllCocktailScreen> {
 
   @override
   Widget build(BuildContext context) {
-    print(cocktails.length);
     return Scaffold(
       appBar: AppBar(
         title: Text('All Cocktails'),
       ),
       body: Container(
         decoration: BoxDecoration(
-            gradient: LinearGradient(begin: Alignment.topCenter, 
-            end: Alignment.bottomCenter, 
-            colors: [Colors.blue,Colors.purple,])),
+            gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+              Colors.blue,
+              Colors.purple,
+            ])),
         child: ListView.builder(
           itemCount: cocktails.length,
           itemBuilder: (BuildContext context, int index) {
             return CocktailItem(
                 cocktailName: cocktails[index].name,
                 imageUrl: cocktails[index].imageUrl,
-                description: cocktails[index].description);
+                description: cocktails[index].description,
+                zutatenByMenge: cocktails[index].zutatenByMenge);
           },
         ),
       ),
