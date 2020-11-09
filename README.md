@@ -5,13 +5,29 @@ Users can easily search for a cocktail of their choice in the search option and 
 If the choice of a cocktail is unclear, you can easily find a list of different types of cocktails using the All-Cocktail option.
 
 * [Allgemeine Information](#Allgemeine-Information)
+* [Architektur](#Architectur)
 * [Lizenz](#Lizenz)
 
 ## Allgemeine Information
 
 The Flutter framework was used to program the program [Flutter](https://flutter.dev/)
 
-Programming with the Programming-Language "Dart" [Dart](https://dart.dev/)
+Programming with the Programming-Language [Dart](https://dart.dev/)
+
+For the List of Cockatil we have used the Cocktail API [The CocktaiDB](https://www.thecocktaildb.com/api.php)
+
+## Architectur
+
+#### Use Cases/User Stories
+
+* User can find a List of many Cocktails
+* The Applcation have a Option to Search for Cocktail
+* Users can add Cocktail in a Favorite List
+
+#### Solution Startegie
+
+The UI to the app should be user-friendly, so that you can easily use the app. This Problem we have solved with the Methods that Flutter provides.
+
 
 ## Getting Started
 
